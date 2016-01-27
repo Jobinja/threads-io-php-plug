@@ -8,16 +8,15 @@ Wabel's Threads.io PHP plug
 What is this?
 -------------
 
-This project is a PHP connector to [Threads.io](http://threads.io). Use this plug to identify your users, track events and page visits or remove them from your Threads.io account.
-
+This project is a PHP connector to [Threads.io](http://threads.io) originally forked from [wabel/threads-io-php-plug](https://github.com/Wabel/threads-io-php-plug). Use this plug to identify your users, track events and page visits or remove them from your Threads.io account.
 Initialize
 ----------
 
 Here is a basic example on how you can use Wabel's Threads.io PHP Plug :
 
 ```php
-use \Wabel\ThreadsIo\ThreadsIoClient;
-use \Wabel\ThreadsIo\ThreadsIoService;
+use \Jobinja\ThreadsIo\ThreadsIoClient;
+use \Jobinja\ThreadsIo\ThreadsIoService;
 
 // The ThreadsIoClient class is the low level class used to make the API calls.
 // It takes your eventKey in parameter, which is provided to you by Threads.io
@@ -25,7 +24,7 @@ $client = new ThreadsIoClient(YOUR_EVENT_KEY);
 
 // The ThreadsIoService class is the high level class that you will use with the Entities to make your API Calls
 // It takes your fresh new ThreadsIoClient object in argument to be instantiate
-$service = new ThreadsIoClient($client);
+$service = new ThreadsIoService($client);
 ```
 
 The two main compound of this package are the **ThreadsIoClient** and **ThreadsIoService**.
@@ -40,9 +39,9 @@ As explained earlier, the **ThreadsIoService** is manipulating entities. A User 
 If you have no classes that could implement the ThreadableInterfaces, you can instantiate manually one of the Wabel\Entities (User, Event or Page) provided in this package.
 
 ```php
-use \Wabel\ThreadsIo\Entities\User;
-use \Wabel\ThreadsIo\Entities\Event;
-use \Wabel\ThreadsIo\Entities\Page;
+use \Jobinja\ThreadsIo\Entities\User;
+use \Jobinja\ThreadsIo\Entities\Event;
+use \Jobinja\ThreadsIo\Entities\Page;
 
 // Whether you retrieve an object implementing the UserThreadableInterface from your DB...
 $yourUser = $dao->getMemberById(2103);
@@ -69,11 +68,11 @@ Here's a basic usage of the service :
 
 
 ```php
-use \Wabel\ThreadsIo\Entities\User;
-use \Wabel\ThreadsIo\Entities\Event;
-use \Wabel\ThreadsIo\Entities\Page;
-use \Wabel\ThreadsIo\ThreadsIoClient;
-use \Wabel\ThreadsIo\ThreadsIoService;
+use \Jobinja\ThreadsIo\Entities\User;
+use \Jobinja\ThreadsIo\Entities\Event;
+use \Jobinja\ThreadsIo\Entities\Page;
+use \Jobinja\ThreadsIo\ThreadsIoClient;
+use \Jobinja\ThreadsIo\ThreadsIoService;
 
 // Instantiate an object that implements one of the Wabel\ThreadsIo\Interfaces
 // (one of the provided classes in this case)
@@ -114,10 +113,19 @@ $service->remove($user);
 
 ```
 
+Feature To-Do
+--------------
+ - Add ability to send request on PHP's shutdown event.
+ - Add ability to use Guzzle6's async requests for sending multiple requests asynchronously.
+
 About Threads.io
 ----------------
 [Threads.io](https://threads.io/) provide a service meant for sending "Automated Behavior-Driven Emails" based on user activity and workflow rules setted by the account administrator.
 You can consult the original API [here](https://docs.threads.io/). Feel free to make any pull requests if you notice any API upgrades.
+
+About Jobinja
+----------------
+[Jobinja](https://jobinja.ir) is an online Job seeking and HR platform.
 
 About Wabel
 ----------------
