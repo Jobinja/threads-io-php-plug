@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/Wabel/threads-io-php-plug.svg?branch=master)](https://travis-ci.org/Wabel/threads-io-php-plug)
 [![Coverage Status](https://coveralls.io/repos/Wabel/threads-io-php-plug/badge.svg?branch=master&service=github)](https://coveralls.io/github/Wabel/threads-io-php-plug?branch=master)
 
-Wabel's Threads.io PHP plug
+Jobinja's Threads.io PHP plug
 ===========================
 
 What is this?
