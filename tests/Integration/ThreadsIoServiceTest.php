@@ -1,18 +1,28 @@
 <?php
-namespace Wabel\Zoho\CRM\Service;
+namespace Jobinja\ThreadsIo\Tests;
 
 
-use Wabel\ThreadsIo\Entities\Event;
-use Wabel\ThreadsIo\Entities\Page;
-use Wabel\ThreadsIo\Entities\User;
-use Wabel\ThreadsIo\Exceptions\ThreadsIoPlugException;
-use Wabel\ThreadsIo\ThreadsIoService;
+use GuzzleHttp\Client;
+use Jobinja\ThreadsIo\Entities\Event;
+use Jobinja\ThreadsIo\Entities\Page;
+use Jobinja\ThreadsIo\Entities\User;
+use Jobinja\ThreadsIo\Exceptions\ThreadsIoInvalidKeyException;
+use Jobinja\ThreadsIo\Exceptions\ThreadsIoPlugException;
+use Jobinja\ThreadsIo\ThreadsIoClient;
+use Jobinja\ThreadsIo\ThreadsIoService;
 
 class ThreadsIoServiceTest extends \PHPUnit_Framework_TestCase {
 
     public function getClient()
     {
-        return new \Wabel\ThreadsIo\ThreadsIoClient($GLOBALS['eventKey']);
+        return new ThreadsIoClient($GLOBALS['eventKey']);
+    }
+
+    public function testInvalidKey()
+    {
+        $this->setExpectedException(ThreadsIoInvalidKeyException::class);
+        $client = new ThreadsIoClient('SOME_RANDOM');
+        $client->identify('SOME_RANDOM', new \DateTimeImmutable(), []);
     }
 
     public function testIdentify() {

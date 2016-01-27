@@ -31,7 +31,7 @@
 
     <php>
         <!-- PLEASE CONFIGURE AUTH TOKEN BELOW IN COPIED FILE -->
-        <!--<var name="eventKey" value="put_your_event_key_here"/>-->
+        <!--<var name="eventKey" value="PUT_YOUR_EVENT_KEY_HERE"/>-->
     </php>
 
 </phpunit>

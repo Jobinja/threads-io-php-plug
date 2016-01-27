@@ -1,16 +1,17 @@
 {
-	"name" : "wabel/threads-io-php-plug",
+	"name" : "jobinja/threads-io-php-plug",
 	"description" : "Plug Threads.io to your PHP application and start collecting events data from your users.",
 	"type" : "library",
-	"homepage" : "http://wwww.wabel.com",
+	"homepage" : "https://jobinja.ir",
 	"keywords" : [
 	  	"Threads.io",
 		"Wrapper",
-		"PHP"
+		"PHP",
+		"Event"
 	],
 	"require" : {
 		"php" : ">=5.4",
-		"guzzlehttp/guzzle": "~5.0",
+		"guzzlehttp/guzzle": "~6.1",
         "psr/log": "~1.0"
 	},
     "require-dev" : {
@@ -19,12 +20,12 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Wabel\\ThreadsIo\\" : "src"
+			"Jobinja\\ThreadsIo\\" : "src"
 		}
 	},
     "autoload-dev" : {
   	    "psr-4" : {
-          "Wabel\\ThreadsIo\\" : "tests"
+          "Jobinja\\ThreadsIo\\Tests\\" : "tests"
 	    }
     },
   	"extra": {
