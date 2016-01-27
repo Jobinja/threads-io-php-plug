@@ -1,8 +1,6 @@
 <?php
-namespace Jobinja\ThreadsIo\Tests;
+namespace Jobinja\ThreadsIo\Tests\Integration;
 
-
-use GuzzleHttp\Client;
 use Jobinja\ThreadsIo\Entities\Event;
 use Jobinja\ThreadsIo\Entities\Page;
 use Jobinja\ThreadsIo\Entities\User;
