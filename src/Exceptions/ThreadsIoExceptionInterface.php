@@ -2,7 +2,7 @@
 
 namespace Jobinja\ThreadsIo\Exceptions;
 
-class ThreadsIoExceptionInterface
+interface ThreadsIoExceptionInterface
 {
 
 }
