@@ -1,8 +1,8 @@
 <?php
 
-namespace Wabel\ThreadsIo\Entities;
+namespace Jobinja\ThreadsIo\Entities;
 
-use Wabel\ThreadsIo\Interfaces\PageThreadableInterface;
+use Jobinja\ThreadsIo\Interfaces\PageThreadableInterface;
 
 /**
  * This class was written to help in the case where you have no classes in your application
@@ -10,7 +10,7 @@ use Wabel\ThreadsIo\Interfaces\PageThreadableInterface;
  * instantiate a Page object to be used with the ThreadsIoService.
  *
  * Class Page
- * @package Wabel\ThreadsIo\Entities
+ * @package Jobinja\ThreadsIo\Entities
  */
 class Page implements PageThreadableInterface {
 

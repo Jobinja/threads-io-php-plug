@@ -1,16 +1,20 @@
 <?php
 /**
- * This was developed by the Tech Team of Wabel.com
+ * This was developed by the Tech Team of Wabel.com and Refactored by Dev Team of Jobinja.ir
+ *
  * Author : Michael WIZMAN
  * Contact : michaelwizman@hotmail.com
+ *
+ * Author : Reza Shadman
+ * Contact : reza@jobinja.ir
  */
 
-namespace Wabel\ThreadsIo;
+namespace Jobinja\ThreadsIo;
 
-use Wabel\ThreadsIo\Exceptions\ThreadsIoPlugException;
-use Wabel\ThreadsIo\Interfaces\EventThreadableInterface;
-use Wabel\ThreadsIo\Interfaces\PageThreadableInterface;
-use Wabel\ThreadsIo\Interfaces\UserThreadableInterface;
+use Jobinja\ThreadsIo\Exceptions\ThreadsIoPlugException;
+use Jobinja\ThreadsIo\Interfaces\EventThreadableInterface;
+use Jobinja\ThreadsIo\Interfaces\PageThreadableInterface;
+use Jobinja\ThreadsIo\Interfaces\UserThreadableInterface;
 
 /**
  * This is the class that should be used to communicate easily with your Threads.io account
@@ -21,7 +25,7 @@ use Wabel\ThreadsIo\Interfaces\UserThreadableInterface;
  * - Remove : Delete a User you registered from Threads.io
  *
  * Class ThreadsIoService
- * @package Wabel\Utils\ThreadsIo
+ * @package Jobinja\ThreadsIo
  */
 class ThreadsIoService {
 

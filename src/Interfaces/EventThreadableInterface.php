@@ -1,6 +1,6 @@
 <?php
 
-namespace Wabel\ThreadsIo\Interfaces;
+namespace Jobinja\ThreadsIo\Interfaces;
 
 /**
  * Implements the ability for an entity to be referenced as an Event by Threads.io
@@ -9,7 +9,7 @@ namespace Wabel\ThreadsIo\Interfaces;
  * If no entity in your app would fit this interface, use the Entities\Event class
  *
  * Interface EventThreadableInterface
- * @package Wabel\ThreadsIo\Interfaces
+ * @package Jobinja\ThreadsIo\Interfaces
  */
 interface EventThreadableInterface extends AbstractThreadableInterface {
     /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace Wabel\ThreadsIo\Entities;
+namespace Jobinja\ThreadsIo\Entities;
 
 
-use Wabel\ThreadsIo\Interfaces\UserThreadableInterface;
+use Jobinja\ThreadsIo\Interfaces\UserThreadableInterface;
 
 /**
  * This class was written to help in the case where you have no classes in your application
@@ -11,7 +11,7 @@ use Wabel\ThreadsIo\Interfaces\UserThreadableInterface;
  * instantiate a User object to be used with the ThreadsIoService.
  *
  * Class User
- * @package Wabel\ThreadsIo\Entities
+ * @package Jobinja\ThreadsIo\Entities
  */
 class User implements UserThreadableInterface {
 

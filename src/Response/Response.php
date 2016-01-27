@@ -1,13 +1,13 @@
 <?php
 
-namespace Wabel\ThreadsIo\Response;
+namespace Jobinja\ThreadsIo\Response;
 
 
 /**
  * Basic Response handler for the package
  *
  * Class Response
- * @package Wabel\ThreadsIo\Response
+ * @package Jobinja\ThreadsIo\Response
  */
 class Response {
 

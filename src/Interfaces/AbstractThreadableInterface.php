@@ -1,12 +1,12 @@
 <?php
 
-namespace Wabel\ThreadsIo\Interfaces;
+namespace Jobinja\ThreadsIo\Interfaces;
 
 /**
  * Implements the ability for an entity to be used with the package ThreadsIoService
  *
  * Interface AbstractThreadableInterface
- * @package Wabel\ThreadsIo\Interfaces
+ * @package Jobinja\ThreadsIo\Interfaces
  */
 interface AbstractThreadableInterface {
 

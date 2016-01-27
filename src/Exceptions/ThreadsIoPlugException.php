@@ -1,14 +1,14 @@
 <?php
 
-namespace Wabel\ThreadsIo\Exceptions;
+namespace Jobinja\ThreadsIo\Exceptions;
 
 /**
  * Exception raised when an error occurs whithin the package
  *
  * Class ThreadsIoPlugException
- * @package Wabel\ThreadsIo\Exceptions
+ * @package Jobinja\ThreadsIo\Exceptions
  */
-class ThreadsIoPlugException extends \Exception
+class ThreadsIoPlugException extends \Exception implements ThreadsIoExceptionInterface
 {
     /**
      * Exception constructor.

@@ -1,13 +1,13 @@
 <?php
 
-namespace Wabel\ThreadsIo\Interfaces;
+namespace Jobinja\ThreadsIo\Interfaces;
 
 /**
  * Implements the ability for user entity to be tracked by Threads.io
  * @see https://docs.threads.io/docs/identify-a-user
  *
  * Interface UserThreadableInterface
- * @package Wabel\ThreadsIo\Interfaces
+ * @package Jobinja\ThreadsIo\Interfaces
  */
 interface UserThreadableInterface extends AbstractThreadableInterface {
     /**
