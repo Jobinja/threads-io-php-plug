@@ -62,12 +62,21 @@ class ThreadsIoClient
     private $eventKey;
 
     /**
+     * Indicates that should the client mock external requests for
+     * development or not.
+     *
+     * @var bool
+     */
+    protected $mock = false;
+
+    /**
      * Client constructor
      *
      * @param string $eventKey
      * @param null   $endPoint
+     * @param bool   $mock
      */
-    public function __construct($eventKey, $endPoint = null)
+    public function __construct($eventKey, $endPoint = null, $mock = false)
     {
         $this->setEventKey($eventKey);
 
@@ -184,6 +193,10 @@ class ThreadsIoClient
      */
     private function call($request)
     {
+        if ($this->isMockMode()) {
+            return $this->mockResponseForRequest($request);
+        }
+
         try {
             $response = $this->getHttpClient()->request($request['method'], $request['action'], $request['params']);
             return new Response($response->getBody());
@@ -195,6 +208,27 @@ class ThreadsIoClient
         } catch (ServerException $e) {
             throw new ThreadsIoServerException($e);
         }
+    }
+
+    /**
+     * Mock response for given request
+     *
+     * @param array $request
+     * @return Response
+     */
+    private function mockResponseForRequest($request)
+    {
+        return new Response(json_encode(['success' => true]));
+    }
+
+    /**
+     * Indicates that request is in mock mode
+     *
+     * @return bool
+     */
+    private function isMockMode()
+    {
+        return (bool)$this->mock;
     }
 
     /**
